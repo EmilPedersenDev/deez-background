@@ -2,7 +2,7 @@
   <header>
     <nav class="navigation">
       <NuxtLink to="/" class="home-link"
-        ><img src="/acorn.png" alt="Deez logo"
+        ><img src="/deez-background/acorn.png" alt="Deez logo"
       /></NuxtLink>
       <ul v-if="desktop" class="navigation-links">
         <li class="navigation-links__item">

@@ -18,9 +18,9 @@
       </div>
     </div> -->
     <div class="brands">
-      <img class="hm" src="/hm.png" alt="" />
-      <img class="boozt" src="/boozt.png" alt="" />
-      <img class="zalando" src="/zalando.png" alt="" />
+      <img class="hm" src="/deez-background/hm.png" alt="" />
+      <img class="boozt" src="/deez-background/boozt.png" alt="" />
+      <img class="zalando" src="/deez-background/zalando.png" alt="" />
     </div>
   </div>
 </template>

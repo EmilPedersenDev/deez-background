@@ -21,7 +21,7 @@ export default {
   target: "static",
 
   router: {
-    base: "/deez-minimal/"
+    base: "/deez-background/"
   },
 
   ssr: true,
