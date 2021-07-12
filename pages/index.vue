@@ -12,15 +12,15 @@
         <d-button :class="{ active: isMounted }">About us</d-button>
       </div>
     </div>
-    <div class="shopping-animation">
+    <!-- <div class="shopping-animation">
       <div class="shopping-animation__wrapper">
         <lottie-shopping />
       </div>
-    </div>
+    </div> -->
     <div class="brands">
-      <img class="hm" src="/deez-minimal/hm.png" alt="" />
-      <img class="boozt" src="/deez-minimal/boozt.png" alt="" />
-      <img class="zalando" src="/deez-minimal/zalando.png" alt="" />
+      <img class="hm" src="/hm.png" alt="" />
+      <img class="boozt" src="/boozt.png" alt="" />
+      <img class="zalando" src="/zalando.png" alt="" />
     </div>
   </div>
 </template>
@@ -38,6 +38,7 @@ export default {
   },
   mounted() {
     this.isMounted = true;
+    console.log(this.$route);
   },
 };
 </script>
@@ -51,23 +52,45 @@ export default {
   align-items: center;
   position: relative;
   overflow: hidden;
+  background-image: url("/girl-yellow.jpg");
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   @media (max-width: 768px) {
     padding: 0 20px;
   }
 
   .deez-information {
-    width: 100%;
+    // width: 100%;
+    // display: flex;
+    // justify-content: center;
+    // flex-basis: 100%;
+
     display: flex;
     justify-content: center;
-    flex-basis: 100%;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 5px;
+    }
+
     @media (min-width: 768px) {
-      align-self: flex-end;
+      position: absolute;
+      top: 50%;
+      right: 15%;
+      transform: translate(15%, -50%);
+      width: auto;
+      //   align-self: flex-end;
     }
-    @media (min-width: 1050px) {
-      flex: 1;
-      flex-basis: 0%;
-      align-self: center;
-    }
+    // @media (min-width: 1050px) {
+    //   flex: 1;
+    //   flex-basis: 0%;
+    //   align-self: center;
+    // }
 
     .deez-information__wrapper {
       h1,
@@ -110,34 +133,34 @@ export default {
       max-width: 400px;
     }
   }
-  .shopping-animation {
-    width: 100%;
-    display: none;
-    justify-content: center;
-    flex-basis: 100%;
-    align-self: flex-start;
-    @media (min-width: 1050px) {
-      flex: 1;
-      flex-basis: 0%;
-      align-self: center;
-    }
+  // .shopping-animation {
+  //   width: 100%;
+  //   display: none;
+  //   justify-content: center;
+  //   flex-basis: 100%;
+  //   align-self: flex-start;
+  //   @media (min-width: 1050px) {
+  //     flex: 1;
+  //     flex-basis: 0%;
+  //     align-self: center;
+  //   }
 
-    @media (min-width: 768px) {
-      display: flex;
-    }
+  //   @media (min-width: 768px) {
+  //     display: flex;
+  //   }
 
-    .shopping-animation__wrapper {
-      width: 100%;
-    }
-  }
+  //   .shopping-animation__wrapper {
+  //     width: 100%;
+  //   }
+  // }
 
   .brands {
     position: absolute;
     bottom: 20px;
-    left: 50%;
+    left: 0%;
     width: 100%;
     max-width: 300px;
-    transform: translateX(-50%);
+    transform: translateX(0%);
     display: flex;
     justify-content: space-evenly;
     align-items: center;

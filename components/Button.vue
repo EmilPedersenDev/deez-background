@@ -47,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .e-button {
-  background-color: $purple-primary;
+  background-color: $purple-dark;
   border: none;
   display: flex;
   align-items: center;

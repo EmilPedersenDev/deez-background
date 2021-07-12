@@ -1,7 +1,9 @@
 <template>
   <header>
     <nav class="navigation">
-      <img src="/deez-minimal/acorn.png" alt="Deez logo" />
+      <NuxtLink to="/" class="home-link"
+        ><img src="/acorn.png" alt="Deez logo"
+      /></NuxtLink>
       <ul v-if="desktop" class="navigation-links">
         <li class="navigation-links__item">
           <NuxtLink to="/" class="navigation-links__item-link">Home </NuxtLink>
@@ -33,16 +35,22 @@
       <div ref="menuOverlay" class="navigation-overlay">
         <ul class="navigation-overlay__links">
           <li class="navigation-overlay__link">
-            <NuxtLink to="/">Home </NuxtLink>
+            <NuxtLink to="/" @click.native.prevent="toggleMenu">Home </NuxtLink>
           </li>
           <li class="navigation-overlay__link">
-            <NuxtLink to="/second-hand">Second Hand </NuxtLink>
+            <NuxtLink to="/second-hand" @click.native.prevent="toggleMenu"
+              >Second Hand
+            </NuxtLink>
           </li>
           <li class="navigation-overlay__link">
-            <NuxtLink to="/outlet">Outlet </NuxtLink>
+            <NuxtLink to="/outlet" @click.native.prevent="toggleMenu"
+              >Outlet
+            </NuxtLink>
           </li>
           <li class="navigation-overlay__link">
-            <NuxtLink to="/about">About </NuxtLink>
+            <NuxtLink to="/about" @click.native.prevent="toggleMenu"
+              >About
+            </NuxtLink>
           </li>
         </ul>
       </div>
@@ -113,7 +121,7 @@ header {
         width: 60px;
       }
       width: 50px;
-      height: 100%;
+      height: auto;
     }
     ul {
       margin: 0;
@@ -135,7 +143,9 @@ header {
       position: relative;
       text-decoration: none;
       color: $black;
-      font-weight: 400;
+      font-weight: 700;
+      letter-spacing: 1px;
+      opacity: 0.7;
       &::before {
         transition: width 0.3s ease-in-out, opacity 0.3s ease;
         content: "";
@@ -147,7 +157,7 @@ header {
         height: 0px;
         opacity: 0;
       }
-      &:hover {
+      &:hover:not(.home-link) {
         &::before {
           opacity: 1;
           height: 2px;
@@ -161,6 +171,10 @@ header {
             height: 1.2px !important;
           }
         }
+      }
+
+      &.home-link {
+        opacity: 1;
       }
     }
 
