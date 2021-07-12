@@ -52,7 +52,7 @@ export default {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background-image: url("/girl-yellow.jpg");
+  background-image: url("/deez-background/girl-yellow.jpg");
   background-position: center 20%;
   background-repeat: no-repeat;
   background-size: cover;
